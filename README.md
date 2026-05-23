@@ -26,3 +26,17 @@ A powerful command-line calculator built with Python that supports basic arithme
 Supports complex string expressions like:
 ```python
 sin(30) + sqrt(16) + log(100, 10)
+```
+
+## 🛡️ Robust Error Handling
+​-Division by zero prevention
+-​Invalid logarithm inputs
+​-Invalid factorial values
+​-Safe expression evaluation
+​** Calculation history tracking
+
+​## 🛠️ Technologies Used
+​🐍 Python 3
+​🧮 Built-in math module
+
+​## 📁 Project Structure
