@@ -1,238 +1,159 @@
-# 🧮 Advanced Calculator GUI
+# 🧮 Advanced Calculator
 
-A modern **dark-themed scientific calculator** built with **Python** and **Tkinter**. This application provides a clean graphical interface for performing basic arithmetic, scientific calculations, trigonometric operations, logarithms, factorials, and custom mathematical expressions.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat-square&logo=python&logoColor=white)
+![Tkinter](https://img.shields.io/badge/Tkinter-GUI-FF8C00?style=flat-square&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22c55e?style=flat-square)
+![Status](https://img.shields.io/badge/Status-Active-22c55e?style=flat-square)
 
----
-
-## ✨ Features
-
-### 🔢 Basic Operations
-
-* Addition
-* Subtraction
-* Multiplication
-* Division
-
-### 📊 Scientific Functions
-
-* Square Root
-* Power Calculation
-* Logarithm
-* Factorial
-* Trigonometric Functions
-
-  * Sine
-  * Cosine
-  * Tangent
-
-### 🎨 Modern GUI
-
-* Dark Theme Interface
-* Responsive Button Layout
-* Simple and User-Friendly Design
-* Real-Time Expression Evaluation
-
-### 🔒 Safe Evaluation
-
-Supports secure evaluation of mathematical expressions while restricting unsafe Python code execution.
+> A scientific calculator built **three times** — as a Python CLI, a Tkinter desktop app, and a modern web app. Same mathematical engine, three completely different implementations across three platforms.
 
 ---
 
-## 📂 Project Structure
+## 🧭 Choose Your Version
 
-```text
+| | 🖥️ CLI (V1) | 🪟 Desktop (V2) | 🌐 Web (V3) |
+|---|---|---|---|
+| **Stack** | Python + `math` | Python + Tkinter | HTML + CSS + JavaScript |
+| **Run Requirement** | Python only | Python only | Just a browser |
+| **Interface** | Terminal menu | Dark GUI window | Dark web app |
+| **History** | In-session list | None | Persistent via `localStorage` |
+| **Scientific Functions** | sin, cos, tan, sqrt, log, factorial, nth root, percentage, exponential | sin, cos, tan, sqrt, log, factorial | sin, cos, tan, sqrt, log, π |
+| **Safe Eval** | ✅ `safe_eval()` with allowlist | ✅ `safe_eval()` with allowlist | ✅ `Function()` sandbox |
+| **Theme Toggle** | ❌ | ❌ | ✅ Light / Dark |
+| **Docs** | [CLI Documentation →](./desktop_version/README.md) | [Desktop Documentation →](./desktop_version/README.md) | [Web Documentation →](./web_version/README.md) |
+
+---
+
+## 📋 Version Timeline
+
+| Version | Platform | Highlights |
+|---|---|---|
+| **V1 — CLI** | Python Terminal | 12-operation menu, full scientific functions, `safe_eval()`, in-session history |
+| **V2 — Desktop** | Python + Tkinter | Dark GUI, button grid, scientific function panel, popup error handling |
+| **V3 — Web** | HTML / CSS / JS | Dark/light theme toggle, persistent `localStorage` history, responsive layout |
+
+---
+
+## ✨ Shared Features (All Versions)
+
+- ➕ **Basic Arithmetic** — addition, subtraction, multiplication, division
+- 📐 **Trigonometry** — sin, cos, tan (degree-based input)
+- √ **Scientific Functions** — square root, logarithm, factorial
+- 🔒 **Safe Expression Evaluation** — no arbitrary code execution
+- ❌ **Error Handling** — divide by zero, invalid log inputs, malformed expressions
+
+---
+
+## 🗂️ Project Structure
+
+```
 advanced-calculator/
 │
-├── calculator_gui.py
-└── README.md
+├── README.md                         # 📍 You are here
+├── LICENSE
+├── .gitignore
+│
+├── desktop_version/
+│   ├── calculator.py                 # 🖥️  V1 — Python CLI calculator
+│   ├── calculator_gui.py             # 🪟 V2 — Tkinter desktop GUI
+│   └── requirements.txt             # 📦 Python dependencies
+│
+└── web_version/
+    ├── index.html                    # 🌐 V3 — Web calculator layout
+    ├── style.css                     # 🎨 V3 — Dark/light theme, responsive grid
+    └── script.js                     # ⚙️  V3 — Calculation engine, history, theme toggle
 ```
 
 ---
 
-## 🛠️ Built With
+## 🔢 Supported Operations
 
-* Python 3
-* Tkinter
-* Math Module
+| Operation | CLI | Desktop | Web |
+|---|:---:|:---:|:---:|
+| Addition / Subtraction / Multiply / Divide | ✅ | ✅ | ✅ |
+| Percentage `%` | ✅ | ✅ | ✅ |
+| Power `pow(x, y)` | ✅ | ✅ | ✅ |
+| Square Root `sqrt()` | ✅ | ✅ | ✅ |
+| Logarithm `log()` | ✅ | ✅ | ✅ |
+| Trigonometry — sin, cos, tan | ✅ | ✅ | ✅ |
+| Factorial `factorial()` | ✅ | ✅ | ❌ |
+| Nth Root | ✅ | ❌ | ❌ |
+| Exponential `e^x` | ✅ | ❌ | ❌ |
+| π constant | ❌ | ❌ | ✅ |
+| Custom expression eval | ✅ | ✅ | ✅ |
+| Persistent history | ❌ | ❌ | ✅ |
+| Theme toggle | ❌ | ❌ | ✅ |
 
 ---
 
-## 🚀 Installation
+## ⚡ Quick Start
 
-### 1. Clone the Repository
-
+### CLI Version
 ```bash
-git clone https://github.com/caffineblud/advanced-calculator.git
-cd advanced-calculator
+cd desktop_version
+python calculator.py
 ```
 
-### 2. Run the Application
-
+### Desktop Version
 ```bash
+cd desktop_version
+pip install -r requirements.txt
 python calculator_gui.py
 ```
 
-No external libraries are required since Tkinter is included with standard Python installations.
-
----
-
-## 🎮 Supported Expressions
-
-### Arithmetic
-
-```text
-5 + 10
-25 / 5
-8 * 12
-```
-
-### Scientific
-
-```text
-sqrt(144)
-pow(2,10)
-factorial(5)
-log(100,10)
-```
-
-### Trigonometry
-
-```text
-sin(90)
-cos(60)
-tan(45)
-```
-
-### Mixed Expressions
-
-```text
-sin(30) + sqrt(16)
-pow(2,8) + log(1000,10)
+### Web Version
+```bash
+cd web_version
+# No install needed — just open in browser
+open index.html
 ```
 
 ---
 
-## 🖥️ User Interface Features
+## 🔒 Safe Evaluation — All Versions
 
-* Dark Theme Design
-* Calculator Display Screen
-* Number Pad
-* Arithmetic Operators
-* Scientific Function Buttons
-* Clear Button
-* Backspace Button
-* Error Popups for Invalid Inputs
+All three versions use a sandboxed expression evaluator — no raw `eval()` on user input.
 
----
-
-## ⚠️ Error Handling
-
-The calculator safely handles:
-
-* Division by Zero
-* Invalid Logarithm Inputs
-* Invalid Factorial Values
-* Incorrect Mathematical Expressions
-
-Example:
-
-```text
-Cannot divide by zero.
+**Python (V1 & V2):**
+```python
+# Only math functions and safe builtins are allowed
+allowed_names = {name: obj for name, obj in math.__dict__.items()
+                 if not name.startswith("__")}
+return eval(expression, {"__builtins__": None}, allowed_names)
 ```
 
-```text
-Factorial is only defined for non-negative integers.
-```
-## 🚀 Evolution of the Project
-
-This project started as a **Command-Line Interface (CLI) Calculator** and was later upgraded into a **Dark-Themed GUI Calculator** using Tkinter.
-
-### Version 1 – CLI Calculator
-
-The original version provided:
-
-- Menu-driven interface
-- Basic arithmetic operations
-- Scientific calculations
-- Trigonometric functions
-- Logarithms and factorials
-- Custom expression evaluation
-- Calculation history tracking
-- Robust error handling
-
-Example:
-
-```text
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-...
-12. Evaluate custom expression
-0. Exit
+**Web (V3):**
+```javascript
+// Function() constructor used as a controlled sandbox
+return Function("sin", "cos", "tan", "sqrt", "log",
+    "return " + expression)(sin, cos, tan, sqrt, log);
 ```
 
-### Version 2 – GUI Calculator
-
-The project was redesigned with a graphical user interface to improve usability and user experience.
-
-### Improvements Made
-
-| CLI Version | GUI Version |
-|------------|-------------|
-| Text-based menu navigation | Interactive graphical interface |
-| User enters commands manually | Button-based calculator layout |
-| Terminal output only | Real-time display screen |
-| Basic appearance | Modern dark-themed design |
-| Keyboard-only interaction | Mouse and keyboard support |
-| Less beginner-friendly | More intuitive and user-friendly |
-| Limited visual feedback | Error popups and cleaner interaction |
-
-### New Features Added
-
-- 🌙 Modern Dark Theme
-- 🖱️ Interactive Buttons
-- ⌫ Backspace Support
-- 🧮 Dedicated Scientific Function Buttons
-- 📱 Cleaner User Experience
-- ⚠️ Popup Error Messages
-- 🎨 Professional Calculator Layout
-
-This upgrade demonstrates the transition from a console-based application to a desktop GUI application while preserving the original calculation engine and mathematical functionality.
 ---
 
-## 🔮 Future Improvements
+## 🔮 Planned Features
 
-* Calculation History
-* Memory Functions (M+, M-, MR)
-* Keyboard Shortcuts
-* Theme Switching
-* Unit Converter
-* Scientific Notation Support
-* Graph Plotting
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome.
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
-
----
-
-## ⭐ Support
-
-If you found this project useful, consider giving the repository a star.
-
-It helps support future improvements and development.
+- [ ] 📊 Graph plotting (matplotlib / Chart.js)
+- [ ] 💾 Memory functions (M+, M−, MR, MC)
+- [ ] ⌨️ Keyboard shortcut support (web version)
+- [ ] 📱 Mobile-responsive web layout
+- [ ] 🔢 Scientific notation support
+- [ ] 📐 Unit converter integration
 
 ---
 
 ## 👨‍💻 Author
 
-Developed by **Yash Kumar Singh**
+<div align="center">
+
+**Yash Kumar Singh**
+
+[![GitHub](https://img.shields.io/badge/GitHub-caffineblud-181717?style=flat-square&logo=github)](https://github.com/caffineblud)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yash_Kumar_Singh-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/yash-kumar-singh-8a4b193b1)
+
+⭐ If you like this project, consider giving it a star.
+
+</div>
