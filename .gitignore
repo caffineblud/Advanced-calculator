@@ -1,0 +1,87 @@
+# ==========================
+# Python
+# ==========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python build files
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+
+# ==========================
+# IDE / Editors
+# ==========================
+
+.vscode/
+.idea/
+
+# VS Code settings
+*.code-workspace
+
+
+# ==========================
+# Operating System
+# ==========================
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+
+
+# ==========================
+# Logs
+# ==========================
+
+*.log
+
+
+# ==========================
+# Environment Variables
+# ==========================
+
+.env
+.env.*
+
+
+# ==========================
+# Node / Web
+# ==========================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+dist/
+
+
+# ==========================
+# Testing / Coverage
+# ==========================
+
+.coverage
+htmlcov/
+
+
+# ==========================
+# Project Specific
+# ==========================
+
+history.json
+*.tmp
+*.cache

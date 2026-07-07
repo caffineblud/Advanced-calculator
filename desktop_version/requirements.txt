@@ -1,0 +1,11 @@
+# GUI Framework
+customtkinter
+
+# Graph plotting (future feature)
+matplotlib
+
+# Data handling (future history system)
+pandas
+
+# Packaging
+pyinstaller
