@@ -36,6 +36,19 @@
 | **V3 — Web** | HTML / CSS / JS | Dark/light theme toggle, persistent `localStorage` history, responsive layout |
 
 ---
+## 🆕 Latest Update — Web Version 3.1
+
+### Added
+- ⌨️ Full keyboard support for calculator input.
+- ↩️ `Enter` key to evaluate expressions.
+- ⌫ `Backspace` support to delete the last character.
+- 🧹 `Delete` and `Escape` keys to clear the display.
+- 🏷️ Introduced `data-key` attributes for all calculator buttons, creating a foundation for keyboard animations and improved accessibility.
+
+This release focuses on improving usability and preparing the web calculator for future features such as button press animations, memory functions, and enhanced keyboard interactions.
+
+---
+
 
 ## ✨ Shared Features (All Versions)
 
@@ -138,7 +151,6 @@ return Function("sin", "cos", "tan", "sqrt", "log",
 
 - [ ] 📊 Graph plotting (matplotlib / Chart.js)
 - [ ] 💾 Memory functions (M+, M−, MR, MC)
-- [ ] ⌨️ Keyboard shortcut support (web version)
 - [ ] 📱 Mobile-responsive web layout
 - [ ] 🔢 Scientific notation support
 - [ ] 📐 Unit converter integration
