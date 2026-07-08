@@ -1,133 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Advanced Calculator Pro</title>
-
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 
-
-<body>
-
-<div class="container">
-
-    <header>
+  <body>
+    <div class="container">
+      <header>
         <h1>Advanced Calculator</h1>
+        <button id="theme-toggle">☀</button>
+      </header>
 
-        <button id="theme-toggle">
-            ☀
-        </button>
-    </header>
-
-
-    <div class="app">
-
-
+      <div class="app">
         <!-- Calculator -->
-
         <section class="calculator">
+          <input type="text" id="display" placeholder="0" readonly>
 
+          <div class="buttons">
+            <button class="action">C</button>
+            <button class="action">⌫</button>
+            <button class="action" data-key="clear">C</button>
+            <button class="action" data-key="backspace">⌫</button>
+            <button data-key="%">%</button>
+            <button data-key="/">/</button>
 
-            <input 
-                type="text"
-                id="display"
-                placeholder="0"
-                readonly
-            >
+            <button data-key="7">7</button>
+            <button data-key="8">8</button>
+            <button data-key="9">9</button>
+            <button data-key="*">*</button>
 
+            <button data-key="4">4</button>
+            <button data-key="5">5</button>
+            <button data-key="6">6</button>
+            <button data-key="-">-</button>
 
-            <div class="buttons">
+            <button data-key="1">1</button>
+            <button data-key="2">2</button>
+            <button data-key="3">3</button>
+            <button data-key="+">+</button>
 
+            <button data-key="0">0</button>
+            <button data-key=".">.</button>
+            <button class="equal" data-key="enter">=</button>
+          </div>
 
-                <button class="action">C</button>
-                <button class="action">⌫</button>
-                <button>%</button>
-                <button>/</button>
-
-
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>*</button>
-
-
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>-</button>
-
-
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>+</button>
-
-
-                <button>0</button>
-                <button>.</button>
-                <button class="equal">=</button>
-
-
-            </div>
-
-
-
-            <div class="scientific">
-
-                <button>sin</button>
-                <button>cos</button>
-                <button>tan</button>
-
-                <button>sqrt</button>
-                <button>log</button>
-                <button>π</button>
-
-            </div>
-
-
+          <div class="scientific">
+            <button data-key="sin">sin</button>
+            <button data-key="cos">cos</button>
+            <button data-key="tan">tan</button>
+            <button data-key="sqrt">sqrt</button>
+            <button data-key="log">log</button><button data-key="pi">π</button>
+          </div>
         </section>
-
-
-
 
         <!-- History -->
-
-
         <section class="history">
-
-            <h2>
-                History
-            </h2>
-
-
-            <ul id="history-list">
-
-            </ul>
-
-
-            <button id="clear-history">
-                Clear
-            </button>
-
-
+          <h2>History</h2>
+          <ul id="history-list"></ul>
+          <button id="clear-history">Clear</button>
         </section>
-
-
-
+      </div>
     </div>
 
-
-</div>
-
-
-
-<script src="script.js"></script>
-
-
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

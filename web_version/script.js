@@ -304,3 +304,53 @@ clearHistoryBtn.addEventListener(
 // Load old history
 
 loadHistory();
+document.addEventListener(
+    "keydown",
+    handleKeyboardInput
+);
+function handleKeyboardInput(event) {
+
+    const key = event.key;
+
+    // Numbers
+    if (/^[0-9]$/.test(key)) {
+        display.value += key;
+        return;
+    }
+
+    // Operators
+    if (["+", "-", "*", "/", ".", "%"].includes(key)) {
+        display.value += key;
+        return;
+    }
+
+    // Parentheses
+    if (key === "(" || key === ")") {
+        display.value += key;
+        return;
+    }
+
+    // Enter
+    if (key === "Enter") {
+        event.preventDefault();
+        calculate();
+        return;
+    }
+
+    // Backspace
+    if (key === "Backspace") {
+        display.value =
+            display.value.slice(0, -1);
+        return;
+    }
+
+    // Escape or Delete
+    if (
+        key === "Escape" ||
+        key === "Delete"
+    ) {
+        display.value = "";
+        return;
+    }
+
+}
