@@ -12,6 +12,14 @@
 
 ---
 
+## 📸 Preview
+
+<p align="center">
+  <img src="web_version/screenshots/calculator_v3.2.png" alt="Advanced Calculator Web v3.2" width="900"/>
+</p>
+
+---
+
 ## 🧭 Choose Your Version
 
 | | 🖥️ CLI (V1) | 🪟 Desktop (V2) | 🌐 Web (V3) |
