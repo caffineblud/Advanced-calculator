@@ -18,12 +18,34 @@
 |---|---|---|---|
 | **Stack** | Python + `math` | Python + Tkinter | HTML + CSS + JavaScript |
 | **Run Requirement** | Python only | Python only | Just a browser |
-| **Interface** | Terminal menu | Dark GUI window | Dark web app |
+| **Interface** | Terminal menu | Dark GUI window | Dark/light web app |
 | **History** | In-session list | None | Persistent via `localStorage` |
 | **Scientific Functions** | sin, cos, tan, sqrt, log, factorial, nth root, percentage, exponential | sin, cos, tan, sqrt, log, factorial | sin, cos, tan, sqrt, log, π |
 | **Safe Eval** | ✅ `safe_eval()` with allowlist | ✅ `safe_eval()` with allowlist | ✅ `Function()` sandbox |
-| **Theme Toggle** | ❌ | ❌ | ✅ Light / Dark |
+| **Keyboard Support** | ❌ | ❌ | ✅ Full keyboard input |
+| **Theme Toggle** | ❌ | ❌ | ✅ Light / Dark (persistent) |
 | **Docs** | [CLI Documentation →](./desktop_version/README.md) | [Desktop Documentation →](./desktop_version/README.md) | [Web Documentation →](./web_version/README.md) |
+
+---
+
+## 🆕 Latest Update — Web Version v3.2
+
+| # | Type | Change |
+|---|---|---|
+| ✨ | **Added** | Complete Light / Dark theme system using CSS variables for centralized theming |
+| ✨ | **Added** | Persistent theme preference via `localStorage` — survives page reloads |
+| ✨ | **Added** | Functional theme toggle button wired to the new theming system |
+| 🔧 | **Improved** | All styling refactored to use CSS theme variables — future customization requires editing one block |
+
+---
+
+## 📋 Web Version Release History
+
+| Version | Highlights |
+|---|---|
+| **v3.0** | Initial web release — dark UI, scientific functions, persistent history, responsive layout |
+| **v3.1** | Full keyboard support (`Enter`, `Backspace`, `Delete`, `Escape`), `data-key` button attributes |
+| **v3.2** | Light / Dark theme system, CSS variables, persistent theme via `localStorage`, functional toggle |
 
 ---
 
@@ -33,22 +55,9 @@
 |---|---|---|
 | **V1 — CLI** | Python Terminal | 12-operation menu, full scientific functions, `safe_eval()`, in-session history |
 | **V2 — Desktop** | Python + Tkinter | Dark GUI, button grid, scientific function panel, popup error handling |
-| **V3 — Web** | HTML / CSS / JS | Dark/light theme toggle, persistent `localStorage` history, responsive layout |
+| **V3 — Web** | HTML / CSS / JS | Keyboard support, persistent history, light/dark theme toggle, responsive layout |
 
 ---
-## 🆕 Latest Update — Web Version 3.1
-
-### Added
-- ⌨️ Full keyboard support for calculator input.
-- ↩️ `Enter` key to evaluate expressions.
-- ⌫ `Backspace` support to delete the last character.
-- 🧹 `Delete` and `Escape` keys to clear the display.
-- 🏷️ Introduced `data-key` attributes for all calculator buttons, creating a foundation for keyboard animations and improved accessibility.
-
-This release focuses on improving usability and preparing the web calculator for future features such as button press animations, memory functions, and enhanced keyboard interactions.
-
----
-
 
 ## ✨ Shared Features (All Versions)
 
@@ -76,8 +85,8 @@ advanced-calculator/
 │
 └── web_version/
     ├── index.html                    # 🌐 V3 — Web calculator layout
-    ├── style.css                     # 🎨 V3 — Dark/light theme, responsive grid
-    └── script.js                     # ⚙️  V3 — Calculation engine, history, theme toggle
+    ├── style.css                     # 🎨 V3 — CSS variables, light/dark theme, responsive grid
+    └── script.js                     # ⚙️  V3 — Calculation engine, history, keyboard, theme toggle
 ```
 
 ---
@@ -98,7 +107,8 @@ advanced-calculator/
 | π constant | ❌ | ❌ | ✅ |
 | Custom expression eval | ✅ | ✅ | ✅ |
 | Persistent history | ❌ | ❌ | ✅ |
-| Theme toggle | ❌ | ❌ | ✅ |
+| Keyboard input | ❌ | ❌ | ✅ |
+| Theme toggle (persistent) | ❌ | ❌ | ✅ |
 
 ---
 

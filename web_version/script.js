@@ -304,6 +304,17 @@ clearHistoryBtn.addEventListener(
 // Load old history
 
 loadHistory();
+const themeButton =
+document.getElementById(
+    "theme-toggle"
+);
+
+loadTheme();
+
+themeButton.addEventListener(
+    "click",
+    toggleTheme
+);
 document.addEventListener(
     "keydown",
     handleKeyboardInput
@@ -352,5 +363,54 @@ function handleKeyboardInput(event) {
         display.value = "";
         return;
     }
+
+}
+function toggleTheme(){
+
+    document.body.classList.toggle(
+        "light"
+    );
+
+    const isLight =
+        document.body.classList.contains(
+            "light"
+        );
+
+    localStorage.setItem(
+        "theme",
+        isLight ? "light" : "dark"
+    );
+
+    updateThemeIcon();
+
+}
+
+
+
+function loadTheme(){
+
+    const theme =
+        localStorage.getItem("theme");
+
+    if(theme==="light"){
+
+        document.body.classList.add(
+            "light"
+        );
+
+    }
+
+    updateThemeIcon();
+
+}
+
+
+
+function updateThemeIcon(){
+
+    themeButton.textContent =
+    document.body.classList.contains("light")
+    ? "🌙"
+    : "☀️";
 
 }

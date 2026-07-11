@@ -14,21 +14,59 @@
    Body
 ========================== */
 
-body {
+:root{
 
-    min-height: 100vh;
+    --bg-gradient: linear-gradient(135deg,#0f0f0f,#1a1a1a);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    --card-bg: rgba(255,255,255,.08);
 
-    background: linear-gradient(
-        135deg,
-        #0f0f0f,
-        #1a1a1a
-    );
+    --display-bg:#111;
 
-    color: white;
+    --button-bg:#2d2d2d;
+
+    --button-hover:#3a3a3a;
+
+    --text:#ffffff;
+
+    --accent:#00c896;
+
+}
+
+
+body.light{
+
+    --bg-gradient: linear-gradient(135deg,#f3f4f6,#ffffff);
+
+    --card-bg:#ffffff;
+
+    --display-bg:#f5f5f5;
+
+    --button-bg:#e4e4e4;
+
+    --button-hover:#d5d5d5;
+
+    --text:#111111;
+
+    --accent:#0ea5e9;
+
+}
+
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--bg-gradient);
+
+    color:var(--text);
+
+    transition:.3s;
 }
 
 
@@ -68,7 +106,7 @@ header h1 {
 
     font-size: 32px;
 
-    color: #00c896;
+    color: var(--accent);
 
 }
 
@@ -122,12 +160,7 @@ header h1 {
 .history {
 
 
-    background: rgba(
-        255,
-        255,
-        255,
-        0.08
-    );
+    background: var(--card-bg);
 
 
     backdrop-filter: blur(15px);
@@ -171,16 +204,13 @@ header h1 {
     border: none;
 
 
-    outline: none;
-
-
     border-radius: 15px;
 
 
-    background: #111;
+    background: var(--display-bg);
 
 
-    color: white;
+    color: var(--text);
 
 
     font-size: 35px;
@@ -231,7 +261,7 @@ button {
     border-radius: 15px;
 
 
-    background: #2d2d2d;
+    background: var(--button-bg);
 
 
     color: white;
@@ -253,7 +283,7 @@ button {
 button:hover {
 
 
-    background: #3a3a3a;
+    background: var(--button-hover);
 
 
     transform: translateY(-3px);
@@ -266,7 +296,7 @@ button:hover {
 .equal {
 
 
-    background: #00c896;
+    background: var(--accent);
 
 
     color: black;
