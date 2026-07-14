@@ -189,37 +189,53 @@ header h1 {
 ========================== */
 
 
-#display {
-
-
-    width: 100%;
-
-
-    height: 80px;
-
-
-    margin-bottom: 20px;
-
-
-    border: none;
-
-
-    border-radius: 15px;
-
+.display-container{
 
     background: var(--display-bg);
 
+    border-radius:15px;
 
-    color: var(--text);
+    padding:15px 20px;
 
+    margin-bottom:20px;
 
-    font-size: 35px;
+}
 
+#expression-display{
 
-    text-align: right;
+    min-height:25px;
 
+    font-size:18px;
 
-    padding: 20px;
+    text-align:right;
+
+    color:#9ca3af;
+
+    margin-bottom:8px;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+}
+
+#display{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:var(--text);
+
+    font-size:36px;
+
+    font-weight:600;
+
+    text-align:right;
 
 }
 
@@ -253,7 +269,19 @@ button {
 
 
     height: 55px;
+    cursor: pointer;
 
+    transition: .2s;
+
+
+
+#history-list li:hover {
+
+    transform: translateX(5px);
+
+    background: var(--button-hover);
+
+}
 
     border: none;
 
@@ -291,7 +319,17 @@ button:hover {
 
 }
 
+button.active{
 
+    transform:scale(.95);
+
+    background:var(--accent);
+
+    color:black;
+
+    box-shadow:0 0 20px var(--accent);
+
+}
 
 .equal {
 

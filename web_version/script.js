@@ -1,8 +1,12 @@
 // ==========================
 // Variables
 // ==========================
-
 const display = document.getElementById("display");
+
+const expressionDisplay =
+document.getElementById(
+    "expression-display"
+);
 
 const buttons = document.querySelectorAll(
     ".buttons button, .scientific button"
@@ -35,7 +39,9 @@ buttons.forEach(button => {
         () => {
 
             const value = button.innerText;
-
+            animateButton(
+                button.dataset.key
+            );
 
             if(value === "="){
 
@@ -45,7 +51,8 @@ buttons.forEach(button => {
 
             else if(value === "C"){
 
-                display.value = "";
+                display.value = "0";
+                expressionDisplay.textContent = "0";
 
             }
 
@@ -89,13 +96,23 @@ function addInput(value){
 
     if(replacements[value]){
 
-        display.value += replacements[value];
+        if(display.value === "0"){
+            display.value = replacements[value];
+        }
+        else{
+            display.value += replacements[value];
+        }
 
     }
 
     else{
 
-        display.value += value;
+        if(display.value === "0"){
+            display.value = value;
+        }
+        else{
+            display.value += value;
+        }
 
     }
 
@@ -122,8 +139,10 @@ function calculate(){
         );
 
 
-        display.value = result;
+        expressionDisplay.textContent =
+        expression;
 
+        display.value = result;
 
         saveHistory(
             expression + " = " + result
@@ -257,24 +276,29 @@ function loadHistory(){
 
 
     historyList.innerHTML="";
+    history.forEach(item => {
 
+        const li = document.createElement("li");
 
-    history.forEach(item=>{
+        li.textContent = item;
 
+        li.style.cursor = "pointer";
 
-        let li=document.createElement(
-            "li"
-        );
+        li.title = "Click to reuse";
 
+        li.addEventListener("click", () => {
 
-        li.innerText=item;
+            const expression = item.split("=")[0].trim();
 
+            display.value = expression;
+
+            expressionDisplay.textContent = "History";
+
+        });
 
         historyList.appendChild(li);
 
-
     });
-
 
 }
 
@@ -325,24 +349,28 @@ function handleKeyboardInput(event) {
 
     // Numbers
     if (/^[0-9]$/.test(key)) {
+        animateButton(key);
         display.value += key;
         return;
     }
 
     // Operators
     if (["+", "-", "*", "/", ".", "%"].includes(key)) {
+        animateButton(key);
         display.value += key;
         return;
     }
 
     // Parentheses
     if (key === "(" || key === ")") {
+        animateButton(key);
         display.value += key;
         return;
     }
 
     // Enter
     if (key === "Enter") {
+        animateButton("enter");
         event.preventDefault();
         calculate();
         return;
@@ -350,6 +378,7 @@ function handleKeyboardInput(event) {
 
     // Backspace
     if (key === "Backspace") {
+        animateButton("backspace");
         display.value =
             display.value.slice(0, -1);
         return;
@@ -360,7 +389,9 @@ function handleKeyboardInput(event) {
         key === "Escape" ||
         key === "Delete"
     ) {
-        display.value = "";
+        animateButton("clear");
+        display.value = "0";
+        expressionDisplay.textContent = "0";
         return;
     }
 
@@ -412,5 +443,23 @@ function updateThemeIcon(){
     document.body.classList.contains("light")
     ? "🌙"
     : "☀️";
+
+}
+
+function animateButton(key){
+
+    const button=document.querySelector(
+        `[data-key="${key}"]`
+    );
+
+    if(!button) return;
+
+    button.classList.add("active");
+
+    setTimeout(()=>{
+
+        button.classList.remove("active");
+
+    },120);
 
 }
