@@ -15,7 +15,7 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="web_version/screenshots/calculator_v3.3.png" alt="Advanced Calculator Web v3.3" width="900"/>
+  <img src="web_version/screenshots/calculator_v3.2.png" alt="Advanced Calculator Web v3.3" width="900"/>
 </p>
 
 ---
