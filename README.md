@@ -15,108 +15,123 @@
 ## 📸 Preview
 
 <p align="center">
-  <img src="web_version/screenshots/calculator_v3.2.png" alt="Advanced Calculator Web v3.2" width="900"/>
+  <img src="web_version/screenshots/calculator_v3.3.png" alt="Advanced Calculator Web v3.3" width="900"/>
 </p>
 
 ---
 
 ## 🧭 Choose Your Version
 
-| | 🖥️ CLI (V1) | 🪟 Desktop (V2) | 🌐 Web (V3) |
-|---|---|---|---|
-| **Stack** | Python + `math` | Python + Tkinter | HTML + CSS + JavaScript |
-| **Run Requirement** | Python only | Python only | Just a browser |
-| **Interface** | Terminal menu | Dark GUI window | Dark/light web app |
-| **History** | In-session list | None | Persistent via `localStorage` |
-| **Scientific Functions** | sin, cos, tan, sqrt, log, factorial, nth root, percentage, exponential | sin, cos, tan, sqrt, log, factorial | sin, cos, tan, sqrt, log, π |
-| **Safe Eval** | ✅ `safe_eval()` with allowlist | ✅ `safe_eval()` with allowlist | ✅ `Function()` sandbox |
-| **Keyboard Support** | ❌ | ❌ | ✅ Full keyboard input |
-| **Theme Toggle** | ❌ | ❌ | ✅ Light / Dark (persistent) |
-| **Docs** | [CLI Documentation →](./desktop_version/README.md) | [Desktop Documentation →](./desktop_version/README.md) | [Web Documentation →](./web_version/README.md) |
+|                          | 🖥️ CLI (V1)                                                           | 🪟 Desktop (V2)                                        | 🌐 Web (V3)                                    |
+| ------------------------ | ---------------------------------------------------------------------- | ------------------------------------------------------ | ---------------------------------------------- |
+| **Stack**                | Python + `math`                                                        | Python + Tkinter                                       | HTML + CSS + JavaScript                        |
+| **Run Requirement**      | Python only                                                            | Python only                                            | Just a browser                                 |
+| **Interface**            | Terminal menu                                                          | Dark GUI window                                        | Professional web app                           |
+| **History**              | In-session list                                                        | None                                                   | Persistent & Clickable via `localStorage`      |
+| **Scientific Functions** | sin, cos, tan, sqrt, log, factorial, nth root, percentage, exponential | sin, cos, tan, sqrt, log, factorial                    | sin, cos, tan, sqrt, log, π                    |
+| **Safe Eval**            | ✅ `safe_eval()` with allowlist                                         | ✅ `safe_eval()` with allowlist                         | ✅ `Function()` sandbox                         |
+| **Keyboard Support**     | ❌                                                                      | ❌                                                      | ✅ Full keyboard input                          |
+| **Theme Toggle**         | ❌                                                                      | ❌                                                      | ✅ Light / Dark (persistent)                    |
+| **Enhanced Display**     | ❌                                                                      | ❌                                                      | ✅ Dual-line expression & result                |
+| **Interactive History**  | ❌                                                                      | ❌                                                      | ✅ Click to reuse expressions                   |
+| **Button Animations**    | ❌                                                                      | ❌                                                      | ✅ Mouse & keyboard feedback                    |
+| **Docs**                 | [CLI Documentation →](./desktop_version/README.md)                     | [Desktop Documentation →](./desktop_version/README.md) | [Web Documentation →](./web_version/README.md) |
 
 ---
 
-## 🆕 Latest Update — Web Version v3.2
+## 🆕 Latest Update — Web Version v3.3
 
-| # | Type | Change |
-|---|---|---|
-| ✨ | **Added** | Complete Light / Dark theme system using CSS variables for centralized theming |
-| ✨ | **Added** | Persistent theme preference via `localStorage` — survives page reloads |
-| ✨ | **Added** | Functional theme toggle button wired to the new theming system |
-| 🔧 | **Improved** | All styling refactored to use CSS theme variables — future customization requires editing one block |
+| #  | Type         | Change                                                                                   |
+| -- | ------------ | ---------------------------------------------------------------------------------------- |
+| ✨  | **Added**    | Professional dual-line display showing both the current expression and calculated result |
+| ✨  | **Added**    | Clickable calculation history to quickly reload and edit previous expressions            |
+| ✨  | **Added**    | Button press animations for both mouse clicks and keyboard input                         |
+| ✨  | **Added**    | Visual feedback for keyboard shortcuts, creating a more responsive user experience       |
+| 🔧 | **Improved** | Calculator layout redesigned for a cleaner and more professional interface               |
+| 🔧 | **Improved** | History interaction and overall UI responsiveness                                        |
 
 ---
 
 ## 📋 Web Version Release History
 
-| Version | Highlights |
-|---|---|
-| **v3.0** | Initial web release — dark UI, scientific functions, persistent history, responsive layout |
-| **v3.1** | Full keyboard support (`Enter`, `Backspace`, `Delete`, `Escape`), `data-key` button attributes |
+| Version  | Highlights                                                                                       |
+| -------- | ------------------------------------------------------------------------------------------------ |
+| **v3.0** | Initial web release — dark UI, scientific functions, persistent history, responsive layout       |
+| **v3.1** | Full keyboard support (`Enter`, `Backspace`, `Delete`, `Escape`), `data-key` button attributes   |
 | **v3.2** | Light / Dark theme system, CSS variables, persistent theme via `localStorage`, functional toggle |
+| **v3.3** | Dual-line display, clickable history, button press animations, improved calculator UX            |
 
 ---
 
 ## 📋 Version Timeline
 
-| Version | Platform | Highlights |
-|---|---|---|
-| **V1 — CLI** | Python Terminal | 12-operation menu, full scientific functions, `safe_eval()`, in-session history |
-| **V2 — Desktop** | Python + Tkinter | Dark GUI, button grid, scientific function panel, popup error handling |
-| **V3 — Web** | HTML / CSS / JS | Keyboard support, persistent history, light/dark theme toggle, responsive layout |
-
----
-
-## ✨ Shared Features (All Versions)
-
-- ➕ **Basic Arithmetic** — addition, subtraction, multiplication, division
-- 📐 **Trigonometry** — sin, cos, tan (degree-based input)
-- √ **Scientific Functions** — square root, logarithm, factorial
-- 🔒 **Safe Expression Evaluation** — no arbitrary code execution
-- ❌ **Error Handling** — divide by zero, invalid log inputs, malformed expressions
+| Version          | Platform         | Highlights                                                                                                                         |
+| ---------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **V1 — CLI**     | Python Terminal  | 12-operation menu, full scientific functions, `safe_eval()`, in-session history                                                    |
+| **V2 — Desktop** | Python + Tkinter | Dark GUI, button grid, scientific function panel, popup error handling                                                             |
+| **V3 — Web**     | HTML / CSS / JS  | Keyboard support, persistent history, light/dark theme, dual-line display, clickable history, button animations, responsive layout |
 
 ---
 
 ## 🗂️ Project Structure
 
-```
+```text
 advanced-calculator/
 │
 ├── README.md                         # 📍 You are here
+├── CHANGELOG.md                      # 📝 Release history
 ├── LICENSE
 ├── .gitignore
 │
 ├── desktop_version/
-│   ├── calculator.py                 # 🖥️  V1 — Python CLI calculator
+│   ├── calculator.py                 # 🖥️ V1 — Python CLI calculator
 │   ├── calculator_gui.py             # 🪟 V2 — Tkinter desktop GUI
-│   └── requirements.txt             # 📦 Python dependencies
+│   └── requirements.txt              # 📦 Python dependencies
 │
 └── web_version/
     ├── index.html                    # 🌐 V3 — Web calculator layout
-    ├── style.css                     # 🎨 V3 — CSS variables, light/dark theme, responsive grid
-    └── script.js                     # ⚙️  V3 — Calculation engine, history, keyboard, theme toggle
+    ├── style.css                     # 🎨 Responsive UI, animations & theme system
+    ├── script.js                     # ⚙️ Calculator engine, history, keyboard & interactions
+    └── screenshots/
+        └── calculator_v3.3.png
 ```
 
 ---
 
 ## 🔢 Supported Operations
 
-| Operation | CLI | Desktop | Web |
-|---|:---:|:---:|:---:|
-| Addition / Subtraction / Multiply / Divide | ✅ | ✅ | ✅ |
-| Percentage `%` | ✅ | ✅ | ✅ |
-| Power `pow(x, y)` | ✅ | ✅ | ✅ |
-| Square Root `sqrt()` | ✅ | ✅ | ✅ |
-| Logarithm `log()` | ✅ | ✅ | ✅ |
-| Trigonometry — sin, cos, tan | ✅ | ✅ | ✅ |
-| Factorial `factorial()` | ✅ | ✅ | ❌ |
-| Nth Root | ✅ | ❌ | ❌ |
-| Exponential `e^x` | ✅ | ❌ | ❌ |
-| π constant | ❌ | ❌ | ✅ |
-| Custom expression eval | ✅ | ✅ | ✅ |
-| Persistent history | ❌ | ❌ | ✅ |
-| Keyboard input | ❌ | ❌ | ✅ |
-| Theme toggle (persistent) | ❌ | ❌ | ✅ |
+| Operation                                  | CLI | Desktop | Web |
+| ------------------------------------------ | :-: | :-----: | :-: |
+| Addition / Subtraction / Multiply / Divide |  ✅  |    ✅    |  ✅  |
+| Percentage `%`                             |  ✅  |    ✅    |  ✅  |
+| Power `pow(x, y)`                          |  ✅  |    ✅    |  ✅  |
+| Square Root `sqrt()`                       |  ✅  |    ✅    |  ✅  |
+| Logarithm `log()`                          |  ✅  |    ✅    |  ✅  |
+| Trigonometry — sin, cos, tan               |  ✅  |    ✅    |  ✅  |
+| Factorial `factorial()`                    |  ✅  |    ✅    |  ❌  |
+| Nth Root                                   |  ✅  |    ❌    |  ❌  |
+| Exponential `e^x`                          |  ✅  |    ❌    |  ❌  |
+| π constant                                 |  ❌  |    ❌    |  ✅  |
+| Custom expression eval                     |  ✅  |    ✅    |  ✅  |
+| Persistent history                         |  ❌  |    ❌    |  ✅  |
+| Clickable history                          |  ❌  |    ❌    |  ✅  |
+| Keyboard input                             |  ❌  |    ❌    |  ✅  |
+| Dual-line display                          |  ❌  |    ❌    |  ✅  |
+| Button animations                          |  ❌  |    ❌    |  ✅  |
+| Theme toggle (persistent)                  |  ❌  |    ❌    |  ✅  |
+
+---
+
+## 🔮 Planned Features
+
+* [ ] 💾 Memory functions (M+, M−, MR, MC)
+* [ ] 📊 Graph plotting (Chart.js)
+* [ ] 🧮 Extended scientific operations (x², xʸ, ⁿ√x, ln, e)
+* [ ] 📐 Unit converter
+* [ ] 💱 Currency converter
+* [ ] 📅 Date calculator
+* [ ] 📱 Enhanced mobile experience
+* [ ] 🤖 AI Math Assistant
 
 ---
 
@@ -162,16 +177,6 @@ return eval(expression, {"__builtins__": None}, allowed_names)
 return Function("sin", "cos", "tan", "sqrt", "log",
     "return " + expression)(sin, cos, tan, sqrt, log);
 ```
-
----
-
-## 🔮 Planned Features
-
-- [ ] 📊 Graph plotting (matplotlib / Chart.js)
-- [ ] 💾 Memory functions (M+, M−, MR, MC)
-- [ ] 📱 Mobile-responsive web layout
-- [ ] 🔢 Scientific notation support
-- [ ] 📐 Unit converter integration
 
 ---
 
